@@ -259,7 +259,7 @@ function kernel_clean {
 	done
 	printf "[-] Kernel search complete!\n"
 	# If there are no kernels to be removed then exit
-	if [[ "$kernels_to_remove" != "" ]]; then
+	if [[ "$kernels_to_remove" != *"linux-image"* ]]; then
 		printf "[!] It appears there are no old kernels on your system ⎦˚◡˚⎣\n"
 		printf "[-] Good bye!\n"
 	# Kernels found in removal list
