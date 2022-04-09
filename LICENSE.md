@@ -1,5 +1,7 @@
 MIT License
 
+Copyright (c) 2022 Lyca Knight
+Original by
 Copyright (c) 2018 Jordan Hillis
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

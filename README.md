@@ -1,29 +1,28 @@
-![PVEKCLEAN Logo](https://jordanhillis.com/images/github/pvekclean/pvekclean_banner.png)
+![KCLEAN Logo](https://lycaknight.de/images/kclean/kclean_banner.png)
 
-Easily remove old/unused PVE kernels on your Proxmox VE system
+Easily remove old/unused kernels on your Debian system
 
-[![Build Status](https://travis-ci.org/jordanhillis/pvekclean.svg?branch=master)](https://travis-ci.org/jordanhillis/pvekclean)
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
-### What is PVE Kernel Cleaner?
+### What is Kernel Cleaner?
 
-PVE Kernel Cleaner is a program to compliment Proxmox Virtual Environment which is an open-source server virtualization environment. PVE Kernel Cleaner allows you to purge old/unused kernels filling the /boot directory. As new kernels are released the older ones have to be manually removed frequently to make room for newer ones. This can become quite tedious and require extensive time spent monitoring the system when new kernels are released and when older ones need to be cleared out to make room. With this issue existing, PVE Kernel Cleaner was created to solve it.
+Kernel Cleaner allows you to purge old/unused kernels filling the /boot directory. As new kernels are released the older ones have to be manually removed frequently to make room for newer ones. This can become quite tedious and require extensive time spent monitoring the system when new kernels are released and when older ones need to be cleared out to make room. With this issue existing, Kernel Cleaner was created to solve it.
 
 ## Example Usage
 
-![PVEKCLEAN Example](https://jordanhillis.com/images/github/pvekclean/pvekclean_example3.png)
+![KCLEAN Example](https://lycaknight.de/images/kclean/kclean_example.png)
 
 ## Features
 
-* Removes old PVE kernels from your system
-* Ability to schedule PVE kernels to automatically be removed on a daily/weekly/monthly basis
-* Run a simple pvekclean command for ease of access
+* Removes old kernels from your system
+* Ability to schedule kernels to automatically be removed on a daily/weekly/monthly basis
+* Run a simple kclean command for ease of access
 * Checks health of boot disk based on space available
-* Support for the latest Proxmox versions and PVE kernels
+* Support for the latest Debian versions and kernels
 
 ## Latest Version
 
-* v1.2
+* v1.0
 
 ## Prerequisites
 
@@ -40,18 +39,18 @@ sudo apt-get install cron
 
 ## Installing
 
-To install PVE Kernel Cleaner please enter the following commands
+To install Kernel Cleaner please enter the following commands
 
 ```
-git clone https://github.com/jordanhillis/pvekclean.git
-cd pvekclean
-chmod +x pvekclean.sh
-./pvekclean.sh
+git clone https://github.com/Lyca-Knight/kclean
+cd kclean
+chmod +x kclean.sh
+./kclean.sh
 ```
 
 ## Updating
 
-To update PVE Kernel Cleaner please run the same commands as described in the "Installing" section.
+To update Kernel Cleaner please run the same commands as described in the "Installing" section.
 
 
 ## Usage
@@ -60,15 +59,18 @@ Example of usage:
 ```
  pvekclean [OPTION]
 
--f		--force				Remove all old PVE kernels without confirm prompts
--s		--scheduler			Have old PVE kernels removed on a scheduled basis
--v		--version			Shows the current version of pvekclean
--r		--remove			Uninstalls pvekclean from the system
+-f		--force				Remove all old kernels without confirm prompts
+-s		--scheduler			Have old kernels removed on a scheduled basis
+-v		--version			Shows the current version of kclean
+-r		--remove			Uninstalls kclean from the system
 -h		--help				Show these options
 ```
 
 ## Developers
 
+* **Lyca Knight**
+
+Original by 
 * **Jordan Hillis** - *Lead Developer*
 
 ## License
@@ -77,4 +79,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* This program is not an official program by Proxmox Server Solutions GmbH
+* This program is original written by Jordan Hillis

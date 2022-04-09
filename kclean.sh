@@ -43,7 +43,7 @@ current_kernel=$(uname -r)
 program_name="kclean"
 
 # Version
-version="1.2"
+version="1.0"
 
 # Check if force removal argument is added
 if [ "$1" == "-f" ] || [ "$1" == "--force" ]; then
@@ -76,7 +76,8 @@ echo -e "
 █▀▀ █   █▀▀ █▀▀█ █▀▀▄ █▀▀ █▀▀█  
 █   █   █▀▀ █▄▄█ █  █ █▀▀ █▄▄▀   ⎦˚◡˚⎣ v$version
 ▀▀▀ ▀▀▀ ▀▀▀ ▀  ▀ ▀  ▀ ▀▀▀ ▀ ▀▀    
-By Jordan Hillis [contact@jordanhillis.com]
+By Lyca Knight [tobiasbrummer@lycaknight.de]
+forked from Jordan Hillis [contact@jordanhillis.com]
 ___________________________________________
 "
 }
@@ -109,9 +110,9 @@ function show_usage {
 	fi
 }
 
-# Schedule PVE Kernel Cleaner at a time desired
+# Schedule Kernel Cleaner at a time desired
 function scheduler(){
-	# Check if pvekclean is on the system, if not exit
+	# Check if kclean is on the system, if not exit
 	if [ ! -f /usr/local/sbin/$program_name ]; then
 		printf "[!] Sorry $program_name is required to be installed on the system for this functionality.\n"
 		exit 1
@@ -243,7 +244,7 @@ function kernel_clean {
 	fi
 	# Display percentage used and available space left
 	printf "at ${boot_info[4]}%% capacity (${boot_info[3]} free)\n"
-	printf "[-] Searching for old PVE kernels on your system...\n"
+	printf "[-] Searching for old kernels on your system...\n"
 	# For each kernel that was found via dpkg
 	for kernel in $kernels
 	do
@@ -258,7 +259,7 @@ function kernel_clean {
 	done
 	printf "[-] Kernel search complete!\n"
 	# If there are no kernels to be removed then exit
-	if [[ "$kernels_to_remove" != *"pve"* ]]; then
+	if [[ "$kernels_to_remove" != "" ]]; then
 		printf "[!] It appears there are no old kernels on your system ⎦˚◡˚⎣\n"
 		printf "[-] Good bye!\n"
 	# Kernels found in removal list
