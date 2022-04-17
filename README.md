@@ -57,7 +57,7 @@ To update Kernel Cleaner please run the same commands as described in the "Insta
 
 Example of usage:
 ```
- pvekclean [OPTION]
+ kclean [OPTION]
 
 -f		--force				Remove all old kernels without confirm prompts
 -s		--scheduler			Have old kernels removed on a scheduled basis
